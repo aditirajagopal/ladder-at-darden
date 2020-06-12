@@ -10,13 +10,13 @@ mainpitch:
 intro:
   title: Here's what women are saying
   blurbs:
-    - image: https://static.thenounproject.com/png/2268857-200.png
+    - publicURL: https://static.thenounproject.com/png/2268857-200.png
       text: >
         "The intentional structures the firm built didn't do anything for me. Firm politics got in the way. I built my own network over months and THAT was helpful"
-    - image: https://static.thenounproject.com/png/2651393-200.png
+    - publicURL: https://static.thenounproject.com/png/2651393-200.png
       text: >
         "I want to know what moves we should be making as women to rise and become Partners. There are thingd I don't know how to deal with. How can I effectively shut down a conversation about pregnancy and my body? What's what I want to know."
-    - image: https://static.thenounproject.com/png/3266090-200.png
+    - publicURL: https://static.thenounproject.com/png/3266090-200.png
       text: >
         "Women's conferences piss me off. It was superficial and segregated women from work - I missed a meeting with partner exposure"
   heading: What we offer

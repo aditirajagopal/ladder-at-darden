@@ -47,7 +47,7 @@ export const IndexPageTemplate = ({
                   <div className="tile">
                     <h3 className="subtitle">{mainpitch.description}</h3>
                   </div>
-                    <img src={`/img/gender_gap.png`} />
+                    <img src="/img/gender_gap.png" />
                 </div>
                 <h3 className="has-text-weight-semibold is-size-2">
                   {intro.title}
@@ -158,6 +158,7 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluid
             }
           }
+          publicURL
         }
         heading
         subheading
@@ -175,6 +176,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             text
           }
