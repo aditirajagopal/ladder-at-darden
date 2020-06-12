@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -35,14 +36,18 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-transparent"
+        className="navbar is-transparent sticky"
         role="navigation"
         aria-label="main-navigation"
       >
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+              <img
+                src={logo}
+                alt="Ladder"
+                style={{ width: '7em', height: '14em' }}
+              />
             </Link>
             {/* Hamburger menu */}
             <div
@@ -60,21 +65,11 @@ const Navbar = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/products">
-                Products
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
+              <AnchorLink className="navbar-item" to="#about">About</AnchorLink>
+              <AnchorLink className="navbar-item" to="#playbook">The Play Book</AnchorLink>
+              <AnchorLink className="navbar-item" to="#faq">FAQ</AnchorLink>
+              <AnchorLink className="navbar-item" to="#team">Team</AnchorLink>
+              <AnchorLink className="navbar-item" to="#contact">Contact</AnchorLink>
             </div>
             <div className="navbar-end has-text-centered">
               <a

@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+import Img from 'gatsby-image'
 
 import Layout from '../components/Layout'
 import Features from '../components/Features'
@@ -16,93 +18,83 @@ export const IndexPageTemplate = ({
   intro,
 }) => (
   <div>
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {title}
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {subheading}
-        </h3>
+    <section className="hero is-medium is-primary is-bold">
+      <div className="hero-body">
+        <div className="container">
+          <h1 className="title">
+            Who Are We?
+          </h1>
+          <h2 className="subtitle">
+            Ladder is a network of women who want to maximize their ROI in consulting - whether that's to get on the right projects, get the next promotion, exit into industry or rise to partner.
+            Subscribe to our newsletter
+          </h2>
+          <div className="buttons">
+            <button className="button is-primary">Subscribe</button>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="content">
-                <div className="content">
+                <div className="content" id="about">
                   <div className="tile">
                     <h1 className="title">{mainpitch.title}</h1>
                   </div>
                   <div className="tile">
                     <h3 className="subtitle">{mainpitch.description}</h3>
                   </div>
+                    <img src={`/img/gender_gap.png`} />
                 </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
+                <h3 className="has-text-weight-semibold is-size-2">
+                  {intro.title}
+                </h3>
                 <Features gridItems={intro.blurbs} />
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
-                  </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
+                <div className="columns" id="playbook">
+                  <div className="column is-12">
+                    <h4 className="has-text-weight-semibold is-size-2">
+                      Our Vision
+                    </h4>
+                    <p>We want to see a world where there is gender parity at all levels of consulting organizations.</p>
+                    <h4 className="has-text-weight-semibold is-size-2">
+                      Our Mission
+                    </h4>
+                    <p>To encourage womyn to excel as consultants and leaders, by building a community supporting each womyn on their unique path.</p>
+                    <h4 className="has-text-weight-semibold is-size-2">
+                      Our Solution
+                    </h4>
+                    <p>We want to support womyn to build their networks, learn from the wisdom of a collective community of womyn (and male allies), and get engaged with womyn on a similar journey.</p>
+                      <h4 className="is-size-4">We’re doing this by:</h4>
+                        <div style={{ marginLeft: '2.5rem'}}>
+                          <li>hosting small group intimate conversations with womyn leaders on their journeys to senior leadership roles at consulting firms.</li> 
+                          <li>hosting large group panels and events to share insights, build skills</li> 
+                          <li>Piloting events that help foster connection and community for womyn in consulting across geographies and organizations</li> 
+                        </div>
+                      <br/>
+                      <h4 className="is-size-4">What we’re doing now:</h4> 
+                        <div style={{ marginLeft: '2.5rem'}}>
+                          <li>Monthly newsletter with events, trends, narratives, and opportunities</li> 
+                          <li>Blogs and personal essays on womyn’s experiences from the workplace</li>
+                          <li>Pilot events with senior womyn leaders and early career womyn at different consulting firms to build your community</li> 
+                        </div>
+                      <br/>
+                      <h4 className="is-size-4">What members access:</h4>
+                      <h5>Horizontal Network Development</h5>
+                      <div style={{ marginLeft: '2.5rem'}}>
+                        <li>Small group community building with women from different firms</li>
+                        <li>Monthly programming and connection</li>
+                      </div>
+                      <br/>
+                      <h5>Vertical Network Cultivation</h5>
+                      <div style={{ marginLeft: '2.5rem'}}>
+                        <li>Intimate events with senior women leaders</li> 
+                        <li>Ask Me Anything forum </li>
+                        <li>Access to former consultants in industry</li> 
+                        <li>Skill building sessions</li>
+                      </div>
                   </div>
                 </div>
               </div>
@@ -122,6 +114,7 @@ IndexPageTemplate.propTypes = {
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
+    title: PropTypes.string,
     blurbs: PropTypes.array,
   }),
 }
@@ -174,6 +167,7 @@ export const pageQuery = graphql`
         }
         description
         intro {
+          title
           blurbs {
             image {
               childImageSharp {

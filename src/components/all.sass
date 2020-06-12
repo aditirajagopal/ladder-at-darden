@@ -5,13 +5,27 @@
 $kaldi-red: #D64000
 $kaldi-red-invert: #fff
 
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
-$body-color: #333
-$black: #2b2523
+$primary: #002e19
+$primary-invert: #fffbf0
+$body-color: #002e19
+$black: #000
+
+.navbar
+  background: $black !important
+
+.navbar-item
+  color: $primary-invert !important
 
 .navbar .navbar-menu
   box-shadow:none !important
+  background-color: $black !important
+
+.navbar-item img
+  max-height: 3.75rem !important
+
+.sticky
+  position: fixed !important
+  width: 100vw
 
 .content .taglist
   list-style: none
@@ -57,7 +71,7 @@ $black: #2b2523
     font-size: 18px
     font-size: 1rem
     line-height: 1.25
-    background-color: #fff
+    background-color: #fffbf0
     border-radius: .25rem
     text-decoration: none
     font-weight: 700
@@ -88,9 +102,9 @@ footer.footer
 $menu-item-color: $white-ter
 $menu-item-hover-color: $black !important
 $menu-item-hover-background-color: $black
-$menu-item-active-color: $kaldi-red-invert
-$menu-item-active-background-color:	$kaldi-red-invert
-$menu-list-border-left: 1px solid $kaldi-red-invert
+$menu-item-active-color: #002e19
+$menu-item-active-background-color:	#fffbf0
+$menu-list-border-left: 1px solid #002e19
 $menu-label-color: $white-ter
 
 
@@ -114,7 +128,7 @@ $menu-label-color: $white-ter
 
 // blog roll
 .blog-list-item.is-featured
-  background-color: #d6400033;
+  background-color: #fffbf0;
 .blog-list-item header
   display: flex;
   margin-bottom: 1em;
